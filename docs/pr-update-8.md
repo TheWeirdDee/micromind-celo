@@ -1,6 +1,6 @@
-# Celo Integration Documentation Update 12
+# Celo Integration Documentation Update 8
 
-This update provides details on the payment gateway development phase 12.
+This update provides details on the payment gateway development phase 8.
 - Implemented cUSD transaction handling
 - Validated gas estimation on Celo Mainnet
 - Cleaned up contract function comments
