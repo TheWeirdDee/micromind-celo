@@ -1,6 +1,6 @@
-# Celo Integration Documentation Update 15
+# Celo Integration Documentation Update 7
 
-This update provides details on the payment gateway development phase 15.
+This update provides details on the payment gateway development phase 7.
 - Implemented cUSD transaction handling
 - Validated gas estimation on Celo Mainnet
 - Cleaned up contract function comments
