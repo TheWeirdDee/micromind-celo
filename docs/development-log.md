@@ -1,3 +1,1 @@
-# MicroMind Celo Payment Contracts Development Journal
-
-Generated commit history consisting of 220 updates.
+- Commit 0: dev milestone reached in step 0
