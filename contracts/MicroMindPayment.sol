@@ -1,4 +1,4 @@
-// Solidity build revision 9
+// Solidity build revision 10
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -7,3 +7,4 @@ import "@openzeppelin/contracts/access/Ownable.sol";
 import "@openzeppelin/contracts/utils/ReentrancyGuard.sol";
 
 contract MicroMindPayment is Ownable, ReentrancyGuard {
+    IERC20 public immutable paymentToken;

@@ -8,3 +8,4 @@
 - Commit 7: dev milestone reached in step 7
 - Commit 8: dev milestone reached in step 8
 - Commit 9: dev milestone reached in step 9
+- Commit 10: dev milestone reached in step 10
