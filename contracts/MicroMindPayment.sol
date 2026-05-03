@@ -1,4 +1,4 @@
-// Solidity build revision 26
+// Solidity build revision 27
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -23,3 +23,4 @@ contract MicroMindPayment is Ownable, ReentrancyGuard {
         uint8 indexed toolId,
         bytes32 promptHash,
         uint256 amount,
+        uint256 timestamp
