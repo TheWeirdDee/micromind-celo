@@ -24,3 +24,4 @@
 - Commit 23: dev milestone reached in step 23
 - Commit 24: dev milestone reached in step 24
 - Commit 25: dev milestone reached in step 25
+- Commit 26: dev milestone reached in step 26
