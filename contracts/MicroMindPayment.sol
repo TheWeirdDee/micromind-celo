@@ -1,4 +1,4 @@
-// Solidity build revision 33
+// Solidity build revision 34
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -30,3 +30,4 @@ contract MicroMindPayment is Ownable, ReentrancyGuard {
         paymentToken = IERC20(_token);
         toolPrices[TOOL_CHAT]   = 0.01 ether;  // 0.01 cUSD/CELO
         toolPrices[TOOL_RESUME] = 0.05 ether;  // 0.05 cUSD/CELO
+        toolPrices[TOOL_TWEET]  = 0.01 ether;  // 0.01 cUSD/CELO
