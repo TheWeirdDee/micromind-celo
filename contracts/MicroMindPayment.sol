@@ -1,4 +1,4 @@
-// Solidity build revision 44
+// Solidity build revision 45
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -40,3 +40,4 @@ contract MicroMindPayment is Ownable, ReentrancyGuard {
     ) external payable nonReentrant {
         require(toolId <= TOOL_BIO, "Invalid tool");
         require(!promptPaid[promptHash], "Already paid");
+        
