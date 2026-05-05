@@ -50,3 +50,4 @@
 - Commit 49: dev milestone reached in step 49
 - Commit 50: dev milestone reached in step 50
 - Commit 51: dev milestone reached in step 51
+- Commit 52: dev milestone reached in step 52
