@@ -1,4 +1,4 @@
-// Solidity build revision 52
+// Solidity build revision 53
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -48,3 +48,4 @@ contract MicroMindPayment is Ownable, ReentrancyGuard {
         totalSpent[msg.sender] += price;
 
         if (msg.value > 0) {
+            require(msg.value >= price, "Insufficient CELO sent");
