@@ -80,3 +80,4 @@
 - Commit 79: dev milestone reached in step 79
 - Commit 80: dev milestone reached in step 80
 - Commit 81: dev milestone reached in step 81
+- Commit 82: dev milestone reached in step 82
