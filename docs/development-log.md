@@ -106,3 +106,4 @@
 - Commit 105: dev milestone reached in step 105
 - Commit 106: dev milestone reached in step 106
 - Commit 107: dev milestone reached in step 107
+- Commit 108: dev milestone reached in step 108
