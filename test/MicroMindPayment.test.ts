@@ -1,4 +1,4 @@
-// Test revision 137
+// Test revision 138
 import { expect } from "chai";
 import { ethers } from "hardhat";
 
@@ -7,3 +7,4 @@ describe("MicroMindPayment", function () {
     const [owner, token] = await ethers.getSigners();
     const Factory = await ethers.getContractFactory("MicroMindPayment");
     const contract = await Factory.deploy(token.address);
+    expect(await contract.paymentToken()).to.equal(token.address);
