@@ -6,3 +6,6 @@ This repository contains the verified smart contracts and deployment tooling for
 - Pay for AI prompts using cUSD / Native CELO.
 - Owner controls for pricing, withdrawals.
 - Optimized for MiniPay wallet.
+
+
+*Updated metadata version: 1.0.151*
