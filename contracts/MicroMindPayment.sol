@@ -1,4 +1,4 @@
-// Solidity build revision 97
+// Solidity build revision 98
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -90,3 +90,5 @@ contract MicroMindPayment is Ownable, ReentrancyGuard {
     function getTotalSpent(address user) external view returns (uint256) {
         return totalSpent[user];
     }
+
+    receive() external payable {}
