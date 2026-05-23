@@ -8,4 +8,4 @@ This repository contains the verified smart contracts and deployment tooling for
 - Optimized for MiniPay wallet.
 
 
-*Updated metadata version: 1.0.153*
+*Updated metadata version: 1.0.154*
