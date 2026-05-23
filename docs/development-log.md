@@ -4,3 +4,4 @@
 - Commit 3: dev milestone reached in step 3
 - Commit 4: dev milestone reached in step 4
 - Commit 5: dev milestone reached in step 5
+- Commit 6: dev milestone reached in step 6
