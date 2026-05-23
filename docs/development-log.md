@@ -37,3 +37,4 @@
 - Commit 36: dev milestone reached in step 36
 - Commit 37: dev milestone reached in step 37
 - Commit 38: dev milestone reached in step 38
+- Commit 39: dev milestone reached in step 39
