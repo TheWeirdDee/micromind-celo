@@ -17,3 +17,4 @@
 - Commit 16: dev milestone reached in step 16
 - Commit 17: dev milestone reached in step 17
 - Commit 18: dev milestone reached in step 18
+- Commit 19: dev milestone reached in step 19
