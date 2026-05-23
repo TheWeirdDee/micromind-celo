@@ -1,4 +1,4 @@
-// Solidity build revision 61
+// Solidity build revision 62
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -55,3 +55,5 @@ contract MicroMindPayment is Ownable, ReentrancyGuard {
                 "cUSD payment failed"
             );
         }
+
+        emit PromptPaid(
