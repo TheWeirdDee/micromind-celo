@@ -1,4 +1,4 @@
-// Solidity build revision 30
+// Solidity build revision 31
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -27,3 +27,4 @@ contract MicroMindPayment is Ownable, ReentrancyGuard {
     );
 
     constructor(address _token) Ownable(msg.sender) {
+        paymentToken = IERC20(_token);
