@@ -1,4 +1,4 @@
-// Solidity build revision 81
+// Solidity build revision 82
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.20;
 
@@ -75,3 +75,4 @@ contract MicroMindPayment is Ownable, ReentrancyGuard {
     }
 
     function withdrawCelo(uint256 amount) external onlyOwner {
+        (bool success, ) = owner().call{value: amount}("");
