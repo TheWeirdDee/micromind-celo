@@ -12,7 +12,9 @@ contract MicroMindPayment is Ownable, ReentrancyGuard {
     uint8 public constant TOOL_RESUME = 1;
     uint8 public constant TOOL_TWEET  = 2;
     uint8 public constant TOOL_BIO    = 3;
+    uint8 public constant TOOL_AUDIT  = 4;
 
+    // Prices in 18 decimals (cUSD or CELO)
     mapping(uint8 => uint256) public toolPrices;
     mapping(bytes32 => bool) public promptPaid;
     mapping(address => uint256) public totalSpent;
@@ -25,19 +27,26 @@ contract MicroMindPayment is Ownable, ReentrancyGuard {
         uint256 timestamp
     );
 
+    // cUSD on Celo Mainnet: 0x765DE816845861e75A25fCA122bb6898B8B1282a
     constructor(address _token) Ownable(msg.sender) {
         paymentToken = IERC20(_token);
+        // Initial prices in 18 decimals
         toolPrices[TOOL_CHAT]   = 0.01 ether;  // 0.01 cUSD/CELO
         toolPrices[TOOL_RESUME] = 0.05 ether;  // 0.05 cUSD/CELO
         toolPrices[TOOL_TWEET]  = 0.01 ether;  // 0.01 cUSD/CELO
         toolPrices[TOOL_BIO]    = 0.02 ether;  // 0.02 cUSD/CELO
+        toolPrices[TOOL_AUDIT]  = 0.10 ether;  // 0.10 cUSD/CELO
     }
 
+    /**
+     * @dev Pay for an AI prompt using either native CELO or the payment token (cUSD).
+     * If msg.value > 0, it treats the payment as CELO.
+     */
     function payForPrompt(
         uint8 toolId,
         bytes32 promptHash
     ) external payable nonReentrant {
-        require(toolId <= TOOL_BIO, "Invalid tool");
+        require(toolId <= TOOL_AUDIT, "Invalid tool");
         require(!promptPaid[promptHash], "Already paid");
         
         uint256 price = toolPrices[toolId];
@@ -48,6 +57,7 @@ contract MicroMindPayment is Ownable, ReentrancyGuard {
 
         if (msg.value > 0) {
             require(msg.value >= price, "Insufficient CELO sent");
+            // Excess CELO remains in contract or could be refunded
         } else {
             require(
                 paymentToken.transferFrom(msg.sender, address(this), price),
@@ -65,7 +75,7 @@ contract MicroMindPayment is Ownable, ReentrancyGuard {
     }
 
     function setToolPrice(uint8 toolId, uint256 price) external onlyOwner {
-        require(toolId <= TOOL_BIO, "Invalid tool");
+        require(toolId <= TOOL_AUDIT, "Invalid tool");
         toolPrices[toolId] = price;
     }
 
@@ -90,5 +100,6 @@ contract MicroMindPayment is Ownable, ReentrancyGuard {
         return totalSpent[user];
     }
 
+    // Allow contract to receive CELO
     receive() external payable {}
 }
